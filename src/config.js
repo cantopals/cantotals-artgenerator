@@ -5,9 +5,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = "Canto Pals Adventure";
+const description = "First Dog NFTs on CANTO";
+const baseUri = "ipfs://bafybeigl4hpyfbdyd2tmyolmvyifsfcfbwvoagt3duh3pr4bh5z3thkptm";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -24,15 +24,14 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 3333,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "background" },
+      { name: "character" },
+      { name: "eyes" },
+      { name: "mouth" },
+      { name: "attire" },
+      { name: "addon" }
     ],
   },
 ];
@@ -42,8 +41,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 1001,
+  height: 1001,
   smoothing: false,
 };
 
@@ -78,7 +77,11 @@ const background = {
   default: "#000000",
 };
 
-const extraMetadata = {};
+const extraMetadata = {
+  artist1: "Murshi",
+  artist2: "Athul",
+  dev: "aloshy.ETH",
+};
 
 const rarityDelimiter = "#";
 
